@@ -7,4 +7,4 @@ before_install:
   - docker build -t dadadev/pro-dev-flow-implementation -f Dockerfile.dev .
 
 script:
-  - docker run dadadev/pro-dev-flow-implementation npm run test -- --coverage
+  - docker run dadadev/pro-dev-flow-implementation -e CI=true npm run test -- --coverage
